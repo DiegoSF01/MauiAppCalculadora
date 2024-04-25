@@ -1,27 +1,46 @@
-﻿namespace MauiAppCalculadora
+﻿using CoreImage;
+
+namespace MauiAppCalculadora
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        double numero_pedido = 0;
+        double numero_resultado = 0;
+        string para_aparecer_no_visor = "";
 
         public MainPage()
         {
             InitializeComponent();
         }
 
+        private void remover_sinais_visor()
+        {
+            if (para_aparecer_no_visor == "+" ||
+               para_aparecer_no_visor == "-" ||
+               para_aparecer_no_visor == "x" ||
+               para_aparecer_no_visor == "/")
+            {
+                para_aparecer_no_visor = "";
+            }
+        }
+
         private void zerar_Clicked(object sender, EventArgs e)
         {
+            para_aparecer_no_visor = "";
+            numero_pedido = 0;
+            numero_resultado = 0;
 
         }
 
         private void maismenos_Clicked(object sender, EventArgs e)
         {
-
+            numero_pedido = numero_pedido * -1;
         }
 
         private void porcento_Clicked(object sender, EventArgs e)
         {
 
+            numero_resultado = numero_pedido / 100;
         }
 
         private void dividir_Clicked(object sender, EventArgs e)

@@ -16,7 +16,7 @@
                 <Setter Property="BackgroundColor" Value="#eee" />
             </Style>
             <Style x:Key="BotaoEscuro" TargetType="Button" BasedOn="{StaticResource EstiloComum}">
-                <Setter Property="BackgroundColor" Value="#ddd" />
+                <Setter Property="BackgroundColor" Value="#aaa" />
             </Style>
             <Style x:Key="BotaoLaranja" TargetType="Button" BasedOn="{StaticResource EstiloComum}">
                 <Setter Property="BackgroundColor" Value="#e8ad00" />
