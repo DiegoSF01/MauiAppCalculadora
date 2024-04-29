@@ -1,4 +1,6 @@
-﻿namespace MauiAppCalculadora
+﻿using System.Diagnostics;
+
+namespace MauiAppCalculadora
 {
     public partial class MainPage : ContentPage
     {
@@ -174,7 +176,10 @@
 
         private void multiplicar_Clicked(object sender, EventArgs e)
         {
-
+            memoria_pre = Convert.ToDouble(visor.Text);
+            para_aparecer_no_visor = "*";
+            operacao = "*";
+            visor.Text = para_aparecer_no_visor;
         }
     }
 
